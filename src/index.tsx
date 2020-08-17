@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 const App: FC = () => {
   return (
     <div>
-      Hello from react
+      Hello from
     </div>
   );
 }
