@@ -4,7 +4,8 @@
   "description": "Tech task for",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/index.html"
+    "start": "parcel src/index.html",
+    "build:css": "tailwindcss build src/css/tailwind.css -o src/css/tailwind-compiled.css"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "styled-components": "^5.1.1",
+    "tailwindcss": "^1.6.3",
     "typescript": "^3.9.7"
   },
   "devDependencies": {

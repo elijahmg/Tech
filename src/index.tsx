@@ -1,38 +1,20 @@
 import React, { FC } from 'react';
 import ReactDOM from 'react-dom';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
+
+import Button from './components/Button';
+import Theme from './theme';
+import GlobalStyle from './theme/globalStyle';
 
 import './index.scss';
-import Button from './components/Button';
-import JsonParserTheme from './theme/mainTheme';
-
-const GlobalStyle = createGlobalStyle`
-    * {
-    font-family: Alata, sans-serif;
-  }
-  body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    width: 100%;  
-  }
-  html {
-    min-height: 100vh;
-    width: 100%;
-  }
-  
-  div#root {
-    min-height: 100vh;
-    width: 100%;
-  }
-`;
 
 const App: FC = () => {
   return (
-    <ThemeProvider theme={JsonParserTheme}>
+    <ThemeProvider theme={Theme}>
       <GlobalStyle />
       <div>
-        <Button primary>Hello from</Button>
+        <Button primary className="mr-3" onClick={() => console.log('hello')}>Hello there</Button>
+        <Button secondary onClick={() => console.log('hello')}>Hello there</Button>
       </div>
     </ThemeProvider>
   );
