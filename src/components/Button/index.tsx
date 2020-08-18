@@ -22,7 +22,7 @@ const Button = styled(RawButton)`
     : props.secondary
     ? props.theme.colors.secondary
     : ''};
-  letter-spacing: 2px !important;
+  letter-spacing: 2px;
   display: inline-block;
   text-align: center;
   text-transform: uppercase;
