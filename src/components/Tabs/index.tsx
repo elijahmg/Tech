@@ -21,7 +21,7 @@ const Tabs: FC<Props> = ({
 
   return (
     <div>
-      <ul className="flex border-b">
+      <ul className="flex border-b pt-3 px-3">
         {config.map((c) => <Tab key={c.title} title={c.title} active={tabId === c.value}
                                 onChange={() => setTab(c.value)}/>)}
       </ul>

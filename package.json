@@ -23,6 +23,9 @@
     "typescript": "^3.9.7"
   },
   "devDependencies": {
-    "sass": "^1.26.10"
+    "@types/jest": "^26.0.10",
+    "jest": "^26.4.1",
+    "sass": "^1.26.10",
+    "ts-jest": "^26.2.0"
   }
 }

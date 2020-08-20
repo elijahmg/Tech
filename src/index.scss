@@ -1,2 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata');
 @import '../src/css/tailwind-compiled.css';
+
+.min-size {
+  min-height: 590px;
+  min-width: 512px;
+}

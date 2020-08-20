@@ -8,7 +8,7 @@ interface Props {
 }
 
 const Container: FC<Props> = ({ children, id, className }) => {
-  const targetClassName = classNames(className, 'max-w-lg', 'rounded', 'overflow-hidden', 'shadow-lg', 'p-6');
+  const targetClassName = classNames(className, 'max-w-lg', 'rounded', 'overflow-hidden', 'shadow-lg', 'p-6', 'min-size');
 
   return (
     <div className={targetClassName}>

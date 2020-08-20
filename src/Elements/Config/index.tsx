@@ -1,6 +1,6 @@
 import React, { FC, useContext, useState } from 'react';
-import TextArea from '../components/TextArea';
-import Button from '../components/Button';
+import TextArea from '../../components/TextArea';
+import Button from '../../components/Button';
 import { TabsContext } from '~/Context/TabsContext';
 import { TAB_RESULT } from '~/components/utils/constants';
 

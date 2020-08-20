@@ -1,15 +1,11 @@
 import React, { FC, useState } from 'react';
 import classNames from 'classnames';
 import RadioButton from '../RadioButton';
-
-type Config = {
-  value: string;
-  label: string;
-}
+import { IRadioButton } from '~/utils/interface';
 
 interface Props {
   className?: string;
-  config: Config[];
+  config: IRadioButton[];
   title: string;
 }
 
