@@ -1,6 +1,6 @@
-import React, { FC, useContext, useState } from 'react';
+import React, { FC, useContext } from 'react';
 import Tab from '../Tab';
-import { TabsContext } from '~/Context/TabsContext';
+import { TabsContext } from '../../Context/TabsContext';
 
 type TabsConfig = {
   value: string;
@@ -15,7 +15,6 @@ interface Props {
 const Tabs: FC<Props> = ({
                            config,
                            children,
-
                          }) => {
   const { tabId, setTab } = useContext(TabsContext);
 

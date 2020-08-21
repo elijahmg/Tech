@@ -6,7 +6,7 @@ interface Props {
   secondary?: boolean;
   className?: string;
   children: React.ReactNode;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 const RawButton: FC<Props> = ({ children, className, onClick }) => {

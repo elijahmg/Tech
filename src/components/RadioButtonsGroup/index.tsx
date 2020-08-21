@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
 import classNames from 'classnames';
 import RadioButton from '../RadioButton';
-import { IRadioButton } from '~/utils/interface';
+import { IRadioButton } from '../../utils/interface';
 
 interface Props {
   className?: string;

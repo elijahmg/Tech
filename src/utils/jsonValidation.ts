@@ -1,5 +1,5 @@
 /** Validate if all values are correct **/
-import { FieldsConfig } from '~/utils/interface';
+import { FieldsConfig } from './interface';
 
 export const validItemTypes = ['numberfield', 'textfield', 'textarea', 'checkbox', 'datefield'];
 export const validButtonTypes = ['primary', 'secondary'];
@@ -15,7 +15,7 @@ export const validateJson = (jsonString: string) => {
   }
 
   const keys = Object.keys(jsonObj);
-  const validKeys = ['items', 'radioButtonGroup', 'buttons'];
+  const validKeys = ['items', 'radioButtonGroup', 'buttons', 'formLabel'];
 
   /** Valid first level of keys **/
   if (keys.some((key) => !validKeys.includes(key))) {
@@ -40,9 +40,14 @@ export const validateJson = (jsonString: string) => {
     }
   });
 
-  jsonObj.radioButtonGroup?.forEach((radioButton) => {
+  if (jsonObj.radioButtonGroup && (!jsonObj.radioButtonGroup.fields || !jsonObj.radioButtonGroup.title)) {
+    throw new Error('Radio button group is missing one of the fields, use field and title');
+  }
+
+
+  jsonObj.radioButtonGroup?.fields.forEach((radioButton) => {
     if (!radioButton.value || !radioButton.label) {
-      throw new Error('Button doesn\'t contain necessary properties, use value and label');
+      throw new Error('Radio button doesn\'t contain necessary properties, use value and label');
     }
   });
 };

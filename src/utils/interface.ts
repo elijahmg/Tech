@@ -1,6 +1,7 @@
 export interface FieldsConfig {
+  formLabel?: string;
   items?: Array<Item>,
-  radioButtonGroup?: Array<IRadioButton>
+  radioButtonGroup?: RadioButtonGroup
   buttons?: Array<IButton>
 }
 
@@ -9,6 +10,11 @@ export type ElementType = 'numberfield' | 'textfield' | 'textarea' | 'checkbox' 
 interface Item {
   label: string;
   type: ElementType;
+}
+
+interface RadioButtonGroup {
+  title: string;
+  fields: Array<IRadioButton>;
 }
 
 export interface IRadioButton {

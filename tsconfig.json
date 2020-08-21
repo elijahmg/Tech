@@ -19,10 +19,7 @@
     "noEmit": true,
     "baseUrl": "./src",
     "typeRoots": ["node_modules/@types", "src/types"],
-    "outDir": "dist",
-    "paths": {
-      "~/*": ["./*"]
-    }
+    "outDir": "dist"
   },
   "include": ["src/**/*"]
 }

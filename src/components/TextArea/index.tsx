@@ -7,9 +7,10 @@ interface Props {
   onChange?: (value: string) => void;
   rows?: number;
   cols?: number;
+  propValue?: string
 }
 
-const TextArea: FC<Props> = ({ className, label, onChange, rows, cols }) => {
+const TextArea: FC<Props> = ({ className, label, onChange, rows, cols, propValue }) => {
   const [value, setValue] = useState<string>();
   const targetClassNames = classNames('flex', 'items-end', className);
 
@@ -25,7 +26,7 @@ const TextArea: FC<Props> = ({ className, label, onChange, rows, cols }) => {
                     onChange(e.target.value);
                   }
                 }}
-                value={value}/>
+                value={propValue || value}/>
     </div>
   );
 }

@@ -35,7 +35,7 @@ describe('Validate json', function () {
   });
 
   it('Throw error wrong radio button props', function () {
-    expect(() => validateJson(wrongRadioButtonProps)).toThrowError('Button doesn\'t contain necessary properties, use value and label');
+    expect(() => validateJson(wrongRadioButtonProps)).toThrowError('Radio button group is missing one of the fields, use field and title');
   });
 
   it('Valid json', function () {

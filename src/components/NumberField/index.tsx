@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
-import styled from "styled-components";
-import Field from "~/components/GenericField";
+import styled from 'styled-components';
+import Field from '../GenericField';
 
 interface Props {
   className?: string;

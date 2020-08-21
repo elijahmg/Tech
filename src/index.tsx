@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import Theme from './theme';
 import GlobalStyle from './theme/globalStyle';
 
-import MainPage from '~/Pages/App';
+import MainPage from './Pages/App';
 import './index.scss';
 
 const App: FC = () => {
