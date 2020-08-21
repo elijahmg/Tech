@@ -1,20 +1,29 @@
 {
   "name": "tech",
   "version": "1.0.0",
-  "description": "Tech task for",
+  "description": "Tech task for Veeam",
   "main": "index.js",
+  "engines": {
+    "node": "12.x"
+  },
   "scripts": {
-    "start": "parcel src/index.html",
-    "build:css": "tailwindcss build src/css/tailwind.css -o src/css/tailwind-compiled.css"
+    "dev": "parcel src/index.html",
+    "build:css": "tailwindcss build src/css/tailwind.css -o src/css/tailwind-compiled.css",
+    "build": "npm run build:css && parcel build src/index.html",
+    "build:parcel":"parcel build src/index.html",
+    "start": "node src/server.js",
+    "heroku-postbuild": "npm run build:css && parcel build src/index.html"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@types/classnames": "^2.2.10",
+    "@types/express": "^4.17.7",
     "@types/react": "^16.9.46",
     "@types/react-dom": "^16.9.8",
     "@types/styled-components": "^5.1.2",
     "classnames": "^2.2.6",
+    "express": "^4.17.1",
     "parcel-bundler": "^1.12.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
