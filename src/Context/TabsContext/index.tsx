@@ -4,10 +4,8 @@ import { FieldsConfig } from '../../utils/interface';
 const TabsContext = React.createContext({
   tabId: '',
   fieldsConfig: {} as FieldsConfig,
-  setTab: (tab: string) => {
-  },
-  setFieldsConfig: (fieldsConfig: FieldsConfig) => {
-  },
+  setTab: (tab: string) => {},
+  setFieldsConfig: (fieldsConfig: FieldsConfig) => {},
 });
 
 interface TabsContextProps {
@@ -22,8 +20,8 @@ const TabsProvider: FC<TabsContextProps> = ({ initTab, children }) => {
   return (
     <TabsContext.Provider value={{
       tabId: tab,
-      setTab: (t) => setTab(t),
       fieldsConfig,
+      setTab: (t) => setTab(t),
       setFieldsConfig: (fields) => setFieldsConfig(fields)
     }}>
       {children}

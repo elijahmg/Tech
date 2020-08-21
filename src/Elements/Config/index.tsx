@@ -2,10 +2,11 @@ import React, { FC, useContext, useEffect, useState } from 'react';
 import TextArea from '../../components/TextArea';
 import Button from '../../components/Button';
 import { TabsContext } from '../../Context/TabsContext';
-import { TAB_RESULT } from '../../components/utils/constants';
+import { TAB_RESULT } from '../../utils/constants';
 import { validateJson } from '../../utils/jsonValidation';
 import removeLineEndings from '../../utils/helpers';
 import { hintJsonString } from '../../utils/hintString';
+import { FieldsConfig } from '../../utils/interface';
 
 const Config: FC = () => {
   const { setTab, setFieldsConfig, fieldsConfig } = useContext(TabsContext);
@@ -30,6 +31,7 @@ const Config: FC = () => {
 
   const onHintHandler = () => {
     setJsonText(JSON.stringify(hintJsonString, null, 2));
+    setFieldsConfig(hintJsonString as FieldsConfig);
     setError('');
   };
 

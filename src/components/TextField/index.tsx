@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import styled from "styled-components";
+import styled from 'styled-components';
 import Field from '../GenericField';
 
 interface Props {
@@ -10,11 +10,13 @@ interface Props {
 const RawTextField: FC<Props> = ({ className, label }) => {
   const [value, setValue] = useState<string>();
 
-  return <Field label={label}
-                value={value} onChange={(e) => setValue(e.target.value)}
-                type="text"
-                className={className}/>
-}
+  return <Field
+    label={label}
+    value={value} onChange={(e) => setValue(e.target.value)}
+    type="text"
+    className={className}
+  />;
+};
 
 const TextField = styled(RawTextField)`
 `;

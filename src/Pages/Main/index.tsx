@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import Layout from '../../components/Layout';
 import { TabsProvider } from '../../Context/TabsContext';
-import { TAB_CONFIG, TAB_MANUAL, TAB_RESULT } from '../../components/utils/constants';
+import { TAB_CONFIG, TAB_MANUAL, TAB_RESULT } from '../../utils/constants';
 import Container from '../../components/Container';
 import Tabs from '../../components/Tabs';
 import Config from '../../Elements/Config';

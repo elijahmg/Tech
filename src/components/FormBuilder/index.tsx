@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
-import { ElementType, FieldsConfig } from '../utils/interface';
-import TextField from '../components/TextField';
-import TextArea from '../components/TextArea';
-import NumberField from '../components/NumberField';
-import DatePicker from '../components/DateField';
-import CheckBox from '../components/CheckBox';
-import RadioButtonGroups from '../components/RadioButtonsGroup';
-import Button from '../components/Button';
+import { ElementType, FieldsConfig } from '../../utils/interface';
+import TextField from '../TextField';
+import TextArea from '../TextArea';
+import NumberField from '../NumberField';
+import DatePicker from '../DateField';
+import CheckBox from '../CheckBox';
+import RadioButtonGroups from '../RadioButtonsGroup';
+import Button from '../Button';
 
 interface Props {
   fieldsConfig: FieldsConfig;
