@@ -12,6 +12,7 @@
     "build": "npm run build:css && parcel build src/index.html",
     "build:parcel":"parcel build src/index.html",
     "start": "node src/server.js",
+    "test": "jest",
     "heroku-postbuild": "npm run build:css && parcel build src/index.html"
   },
   "author": "",

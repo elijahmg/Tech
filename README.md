@@ -2,6 +2,25 @@
 
 This application can build form from JSON config
 
+### How to start ###
+
+Before starting a project run build:css command
+~~~
+npm run build:css
+~~~
+
+This will create compiled tailwind file then run
+
+~~~
+npm run dev
+~~~
+
+For test run
+
+~~~
+npm test
+~~~
+
 #### Demo ###
 
 https://tech-task-form-builder.herokuapp.com/
